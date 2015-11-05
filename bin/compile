@@ -9,7 +9,7 @@ echo "-----> Install ImageMagick"
 BUILD_DIR=$1
 VENDOR_DIR="$BUILD_DIR/vendor"
 INSTALL_DIR="$VENDOR_DIR/imagemagick"
-CACHE_FILE="$CACHE_DIR/imagemagick.tar.gz"
+CACHE_FILE="$2/imagemagick.tar.gz"
 
 
 if [ ! -f $CACHE_FILE ]; then
