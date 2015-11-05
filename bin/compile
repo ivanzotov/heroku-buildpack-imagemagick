@@ -9,7 +9,7 @@ echo "-----> Install ImageMagick"
 BUILD_DIR=$1
 VENDOR_DIR="$BUILD_DIR/vendor"
 INSTALL_DIR="$VENDOR_DIR/imagemagick"
-CACHE_FILE="$CACHE_DIR/imagemagick.tar.xz"
+CACHE_FILE="$CACHE_DIR/imagemagick.tar.gz"
 
 
 if [ ! -f $CACHE_FILE ]; then
@@ -41,7 +41,7 @@ if [ ! -f $CACHE_FILE ]; then
 else
   # cache exists, extract it
   echo "-----> Extracting ImageMagick $CACHE_FILE => $VENDOR_DIR"
-  tar xf $CACHE_FILE -C $VENDOR_DIR
+  tar xzf $CACHE_FILE -C $VENDOR_DIR
 fi
 
 # update PATH and LD_LIBRARY_PATH
