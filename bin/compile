@@ -20,7 +20,7 @@ if [ ! -f $CACHE_FILE ]; then
   IMAGE_MAGICK_URL="http://www.imagemagick.org/download/releases/$IMAGE_MAGICK_FILE"
 
   echo "-----> Downloading ImageMagick from $IMAGE_MAGICK_URL"
-  curl -L --silent $IMAGE_MAGICK_URL | tar x
+  curl -L --silent $IMAGE_MAGICK_URL | tar xJ
 
   echo "-----> Building ImageMagick"
   cd $IMAGE_MAGICK_DIR
