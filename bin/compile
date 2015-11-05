@@ -20,7 +20,7 @@ if [ ! -f $CACHE_FILE ]; then
   IMAGE_MAGICK_URL="http://www.imagemagick.org/download/releases/$IMAGE_MAGICK_FILE"
 
   echo "-----> Downloading ImageMagick from $IMAGE_MAGICK_URL"
-  curl -L --silent $IMAGE_MAGICK_URL | tar xz
+  curl -L --silent $IMAGE_MAGICK_URL | tar xf
 
   echo "-----> Building ImageMagick"
   cd $IMAGE_MAGICK_DIR
@@ -41,7 +41,7 @@ if [ ! -f $CACHE_FILE ]; then
 else
   # cache exists, extract it
   echo "-----> Extracting ImageMagick $CACHE_FILE => $VENDOR_DIR"
-  tar xzf $CACHE_FILE -C $VENDOR_DIR
+  tar xf $CACHE_FILE -C $VENDOR_DIR
 fi
 
 # update PATH and LD_LIBRARY_PATH
